@@ -1,0 +1,16 @@
+
+<h1>Mostrando todos los Periodistas</h1>
+<p> <%= @journalists.count %> </p>
+
+<% @journalists.each do |journalist| %>
+<h4>Nombre:</h4>
+    <p> <%= journalist.name %> </p>
+    <h4>Apellido:</h4>
+    <p> <%= journalist.lastname %> </p>
+    <h4>Especialidad:</h4>
+    <p> <%= journalist.specialty %> </p>
+<% end %>
+
+<div>
+<%= link_to "Agregar nuevo Periodista", journalists_new_path, class: "btn btn-dark" %>
+</div>
